@@ -9,6 +9,8 @@ import {
   Button
 } from "reactstrap";
 
+import { BiCommentCheck, BiCommentX } from "react-icons/bi";
+
 export const EditUser = (props) => {
   const { editUser, users } = useContext(GlobalContext);
   const [selectedUser, setSelectedUser] = useState({
@@ -40,8 +42,8 @@ export const EditUser = (props) => {
         <Label>Name</Label>
         <Input type="text" value={selectedUser.name} onChange={onChange} name="name" placeholder="Enter user" required></Input>
       </FormGroup>
-      <Button type="submit">Edit Name</Button>
-      <Link to="/" className="btn btn-danger ml-2">Cancel</Link>
+      <Button type="submit" class="btn btn-success" ><BiCommentCheck /></Button>
+      <Link to="/" className="btn btn-danger ml-2"><BiCommentX /></Link>
     </Form>
   )
 }

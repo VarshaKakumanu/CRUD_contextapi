@@ -7,15 +7,16 @@ import {
   NavbarBrand,
   Container
 } from "reactstrap";
+import { BiUserPlus } from "react-icons/bi";
 
 export const Heading = () => {
   return (
-    <Navbar color="dark" dark>
-      <Container>
-        <NavbarBrand href="/">My Team</NavbarBrand>
+    <Navbar color="dark rounded" dark>
+      <Container  >
+        <NavbarBrand  href="/">My Team</NavbarBrand>
         <Nav>
           <NavItem>
-            <Link className="btn btn-primary" to="/add">Add User</Link>
+            <Link className="btn btn-dark" to="/add"><BiUserPlus /></Link>
           </NavItem>
         </Nav>
 

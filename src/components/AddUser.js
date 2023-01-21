@@ -9,6 +9,8 @@ import {
   Input,
   Button
 } from "reactstrap";
+import { BiCommentCheck, BiCommentX } from "react-icons/bi";
+
 
 export const AddUser = () => {
   const [name, setName] = useState('');
@@ -35,8 +37,8 @@ export const AddUser = () => {
         <Label>Name</Label>
         <Input type="text" value={name} onChange={onChange} name="name" placeholder="Enter user" required></Input>
       </FormGroup>
-      <Button type="submit">Submit</Button>
-      <Link to="/" className="btn btn-danger ml-2">Cancel</Link>
+      <Button type="submit"class="btn btn-success"><BiCommentCheck /></Button>
+      <Link to="/" className="btn btn-danger ml-2"><BiCommentX /></Link>
     </Form>
   )
 }

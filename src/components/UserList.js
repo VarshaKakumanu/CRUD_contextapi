@@ -6,6 +6,7 @@ import {
   ListGroupItem,
   Button
 } from "reactstrap";
+import { BiCommentX, BiCommentEdit } from "react-icons/bi";
 
 export const UserList = () => {
   const { users, removeUser } = useContext(GlobalContext);
@@ -18,8 +19,8 @@ export const UserList = () => {
             <ListGroupItem className="d-flex" key={user.id}>
               <strong>{user.name}</strong>
               <div className="ml-auto">
-                <Link to={`/edit/${user.id}`} color="warning" className="btn btn-warning mr-1">Edit</Link>
-                <Button onClick={() => removeUser(user.id)} color="danger">Delete</Button>
+                <Link to={`/edit/${user.id}`}  className="btn btn-primary mr-1"><BiCommentEdit /></Link>
+                <Button onClick={() => removeUser(user.id)} color="danger"><BiCommentX /></Button>
               </div>
             </ListGroupItem>
           ))}
